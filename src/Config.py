@@ -60,9 +60,14 @@ class Config:
             input()
             raise ex
         try:
+            """
             remoteBestStreamsFile = requests.get(self.REMOTE_BEST_STREAMS_URL)
             if remoteBestStreamsFile.status_code == 200:
                 self.bestStreams = remoteBestStreamsFile.text.split()
+            """
+            self.bestStreams` = ['riotgames', 'lckcl', 'lpl', 'lck', 'lec', 'lcs', 'lco', 'cblol', 'lla', 'riotgamesjp',
+
+                          'riotgamesturkish', 'lolpacific', `'EUMasters']
         except Exception as ex:
             print(f"[red]CRITICAL ERROR: Beststreams couldn't be loaded. Are you connected to the internet?")
             print("Press any key to exit...")
